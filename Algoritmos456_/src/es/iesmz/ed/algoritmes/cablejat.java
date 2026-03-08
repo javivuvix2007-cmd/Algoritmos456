@@ -4,8 +4,12 @@ public class cablejat {
     private String[] cables;
 
     public cablejat(String[] cables) {
+        if (cables == null || cables.length == 0) {
+            throw new IllegalArgumentException("El vector de cables no puede estar vacío");
+        }
         this.cables = cables;
     }
+    
     public boolean esPotConnectar() {
         int M = 0;
         int H = 0;
