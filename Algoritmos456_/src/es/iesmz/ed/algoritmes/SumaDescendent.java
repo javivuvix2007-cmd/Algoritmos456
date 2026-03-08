@@ -3,8 +3,10 @@ package es.iesmz.ed.algoritmes;
 public class SumaDescendent {
     private long num;
 
-    public SumaDescendent(long num) {
-        this.num = num;
+    public SumaDescendent(long num) throws Exception {
+        if(num < 0) {
+            throw new Exception("El numero no puede ser negativo");
+        }
     }
 
     public long suma() {
